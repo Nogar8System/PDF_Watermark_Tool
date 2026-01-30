@@ -1295,7 +1295,7 @@ section {
 
 /* Footer Bottom - Layout a 3 colonne */
 .footer-bottom {
-    padding: 15px 0;
+    padding: 20px 0;
     border-top: 1px solid var(--border-color);
     margin-top: 20px;
     width: 100%;
@@ -1323,16 +1323,25 @@ section {
     min-width: 300px;
 }
 
+/* Logo N8S con effetti hero */
 .footer-n8s-logo {
-    height: 48px;
+    height: 60px;
     width: auto;
     filter: var(--logo-filter);
     opacity: 0.9;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .footer-n8s-logo:hover {
     opacity: 1;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .copyright-text {
@@ -1352,6 +1361,11 @@ section {
 /* Dark mode per il logo */
 .dark-mode .footer-n8s-logo {
     filter: brightness(0) invert(1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .footer-n8s-logo:hover {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
@@ -1376,7 +1390,8 @@ section {
     }
     
     .footer-n8s-logo {
-        height: 20px;
+        height: 45px;
+        padding: 6px;
     }
     
     .copyright-text {
