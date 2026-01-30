@@ -1292,44 +1292,71 @@ section {
         padding: 48px 0;
     }
 	
-	/* Footer Bottom con Logo N8S */
 	.footer-bottom {
-		text-align: center;
+		text-align: left;
 		padding: 20px 0;
 		border-top: 1px solid var(--border-color);
 		margin-top: 20px;
+		width: 100%;
 	}
 
-	.footer-logo-wrapper {
-		margin-bottom: 15px;
+	.footer-bottom-content {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 15px;
+		margin-bottom: 10px;
+		padding-left: 20px; /* Spazio a sinistra per il logo */
+		flex-wrap: wrap;
 	}
 
-	.footer-n8s-logo {
-		height: 40px;
+	.footer-logo-inline {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		margin-right: 15px; /* Spazio tra logo e testo */
+	}
+
+	.footer-n8s-logo-inline {
+		height: 35px;
 		width: auto;
-		display: inline-block;
 		filter: var(--logo-filter);
-		transition: transform 0.3s ease;
+		margin-left: -20px; /* Sposta il logo ancora più a sinistra */
 	}
 
-	.footer-n8s-logo:hover {
-		transform: scale(1.05);
-	}
-
-	/* Dark mode per il logo */
-	.dark-mode .footer-n8s-logo {
-		filter: brightness(0) invert(1);
-	}
-
-	.footer-bottom p {
-		margin: 5px 0;
+	.copyright-text {
+		margin: 0;
 		color: var(--text-color);
-		font-size: 0.9rem;
+		font-size: 0.95rem;
 	}
 
 	.footer-disclaimer {
 		font-size: 0.85rem;
 		color: var(--text-secondary-color);
-		margin-top: 8px;
-	}	
-}
+		margin: 8px 0 0 0;
+		text-align: left;
+		padding-left: 20px;
+	}
+
+	/* Dark mode per il logo */
+	.dark-mode .footer-n8s-logo-inline {
+		filter: brightness(0) invert(1);
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.footer-bottom-content {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 15px;
+		}
+		
+		.footer-n8s-logo-inline {
+			height: 30px;
+			margin-left: 0;
+		}
+		
+		.footer-disclaimer {
+			padding-left: 15px;
+		}
+	}
