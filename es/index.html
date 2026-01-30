@@ -1,4 +1,612 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PDF Watermark Tool - Añade marcas de agua de texto o imágenes a tus documentos PDF con precisión y facilidad">
+    <title>PDF Watermark Tool v3.3 - Español</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- FONDO CON LOGO DESVANECIDO -->
+    <div class="background-logo">
+        <div class="logo-watermark"></div>
+    </div>
+
+    <div class="container">
+        <!-- CABECERA CON LOGO -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-wrapper">
+                        <div class="logo-main">
+                            <img src="logo.png" alt="Logo de PDF Watermark Tool" class="logo-image">
+                        </div>
+                        <div class="logo-text">
+                            <h1>PDF Watermark Tool</h1>
+                            <span class="version">Versión 3.3</span>
+                        </div>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <a href="#features" class="active">Inicio</a>
+                    <a href="#features">Funcionalidades</a>
+                    <a href="#screenshots">Vistas previas</a>
+                    <a href="#download">Descargar</a>
+                    <a href="#manual">Info</a>
+
+                    <!-- Selector de idioma -->
+                    <div class="lang-selector">
+                        <div class="lang-current">
+                            <span>Español</span>
+                            <span>▼</span>
+                        </div>
+                        <div class="lang-dropdown">
+                            <a href="https://nogar8system.github.io/PDF_Watermark_Tool/en/" data-lang="en">English</a>
+                            <a href="https://nogar8system.github.io/PDF_Watermark_Tool/it/" data-lang="es">Italiano</a>
+                            <a href="https://nogar8system.github.io/PDF_Watermark_Tool/de/" data-lang="de">Deutsch</a>
+                            <a href="https://nogar8system.github.io/PDF_Watermark_Tool/fr/" data-lang="fr">Français</a>
+                        </div>
+                    </div>
+                    <!-- Alternador de tema -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- SECCIÓN HERO CON LOGO PROMINENTE -->
+        <section class="hero hero-with-bg">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="Logo de PDF Watermark Tool" class="hero-logo-image">
+                </div>
+                <h1>PDF Watermark Tool</h1>
+                <p>Protege tus documentos con marcas de agua profesionales, sin complicaciones</p>
+				<div class="hero-buttons">
+					<a href="#download" class="btn btn-primary">
+						<i class="fas fa-download"></i> Descargar Gratis (v3.3)
+					</a>				
+					<a href="#manual" class="btn btn-secondary">
+						<i class="fas fa-book"></i> Leer el Manual
+					</a>
+				</div>
+                <div class="file-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Archivo: PDF_Watermark_Tool.exe • Tamaño: ~15 MB</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="main-content">
+            <!-- SECCIÓN DE FUNCIONALIDADES -->
+            <section id="features">
+                <div class="section-title">
+                    <h2><i class="fas fa-star"></i> Funcionalidades Principales</h2>
+                    <p>Descubre todas las potentes funcionalidades de PDF Watermark Tool</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Marca de agua de texto -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <h3>Marca de Agua de Texto</h3>
+                        <p>Añade texto personalizado como marca de agua a tus PDF con control total sobre tamaño, color, transparencia, rotación y posición precisa.</p>
+                        <div class="feature-preview text-watermark">
+                            <span>COPIA CONFORME AL ORIGINAL</span>
+                        </div>
+                    </div>
+
+                    <!-- Marca de agua de imagen -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3>Marca de Agua de Imagen</h3>
+                        <p>Utiliza logos o imágenes personalizadas (PNG, JPG, GIF, BMP) como marca de agua con control sobre escala, transparencia, rotación y posición flexible.</p>
+                        <div class="feature-preview image-watermark">
+                            <div class="logo-placeholder">
+                                <img src="logo.png" alt="Logo" class="preview-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Procesamiento múltiple -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Procesamiento Múltiple</h3>
+                        <p>Procesa todos los PDF de una carpeta con un solo clic. Barra de progreso en tiempo real, registro detallado y posibilidad de interrumpir el procesamiento en cualquier momento.</p>
+                        <div class="feature-badge">
+                            <i class="fas fa-infinity"></i> PDF Ilimitados
+                        </div>
+                    </div>
+
+                    <!-- Modos de guardado -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-save"></i>
+                        </div>
+                        <h3>Modos de Guardado</h3>
+                        <p>Elige entre modo seguro (carpeta separada) o sobrescritura con respaldo automático (.pdf.bak). Tus archivos originales siempre están protegidos.</p>
+                        <div class="feature-badge security">
+                            <i class="fas fa-shield-alt"></i> Seguridad Garantizada
+                        </div>
+                    </div>
+
+                    <!-- Unión de PDF -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Unión de PDF</h3>
+                        <p>Une múltiples archivos PDF en un solo documento con vista previa, orden personalizable, tamaños optimizados y nombre de archivo personalizado.</p>
+                        <div class="merge-preview">
+                            <i class="fas fa-file-pdf"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-file-pdf"></i>
+                            <i class="fas fa-equals"></i>
+                            <i class="fas fa-file-pdf merged"></i>
+                        </div>
+                    </div>
+
+                    <!-- Impresión de PDF -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Impresión de PDF</h3>
+                        <p>Imprime directamente tus documentos PDF, selección múltiple, impresión por lotes y monitoreo de cola de impresión.</p>
+                        <div class="feature-badge">
+                            <i class="fas fa-print"></i> Impresión Profesional
+                        </div>
+                    </div>
+
+                    <!-- Convertir imágenes a PDF - NUEVA FUNCIÓN v3.3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>Convertir Imágenes a PDF</h3>
+                        <p>Transforma tus imágenes (PNG, JPG, GIF, BMP, TIFF) en documentos PDF profesionales. Redimensionamiento automático, orientación personalizable y márgenes opcionales.</p>
+                        <div class="feature-badge">
+                            <i class="fas fa-magic"></i> Nuevo en v3.3
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE VISTAS PREVIAS -->
+            <section id="screenshots">
+                <div class="section-title">
+                    <h2><i class="fas fa-images"></i> Vistas Previews de la Aplicación</h2>
+                    <p>Mira el software en acción</p>
+                </div>
+
+                <div class="screenshots-grid">
+                    <div class="screenshot-card">
+                        <div class="screenshot-header">
+                            <i class="fas fa-tachometer-alt"></i> Panel Principal
+                        </div>
+                        <div class="screenshot-body">
+                            <div class="screenshot-img">
+                                <div class="screenshot-placeholder">
+                                    <div class="placeholder-logo">
+                                        <img src="logo.png" alt="Logo">
+                                    </div>
+                                    <i class="fas fa-desktop"></i>
+                                    <div class="placeholder-text">Interfaz principal con todas las opciones</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-footer">
+                            <p>Interfaz intuitiva con acceso rápido a todas las funcionalidades</p>
+                        </div>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-header">
+                            <i class="fas fa-sliders-h"></i> Configuración de Marca de Agua
+                        </div>
+                        <div class="screenshot-body">
+                            <div class="screenshot-img">
+                                <div class="screenshot-placeholder">
+                                    <div class="placeholder-logo">
+                                        <img src="logo.png" alt="Logo">
+                                    </div>
+                                    <i class="fas fa-cog"></i>
+                                    <div class="placeholder-text">Opciones personalizadas para marca de agua</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-footer">
+                            <p>Control total sobre color, tamaño, transparencia y posición</p>
+                        </div>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-header">
+                            <i class="fas fa-list"></i> Gestión de Archivos PDF
+                        </div>
+                        <div class="screenshot-body">
+                            <div class="screenshot-img">
+                                <div class="screenshot-placeholder">
+                                    <div class="placeholder-logo">
+                                        <img src="logo.png" alt="Logo">
+                                    </div>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div class="placeholder-text">Lista de archivos PDF encontrados y procesados</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-footer">
+                            <p>Dos listas separadas para archivos encontrados y procesados con vista previa</p>
+                        </div>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-header">
+                            <i class="fas fa-chart-line"></i> Monitoreo de Progreso
+                        </div>
+                        <div class="screenshot-body">
+                            <div class="screenshot-img">
+                                <div class="screenshot-placeholder">
+                                    <div class="placeholder-logo">
+                                        <img src="logo.png" alt="Logo">
+                                    </div>
+                                    <i class="fas fa-tasks"></i>
+                                    <div class="placeholder-text">Barra de progreso y registro en tiempo real</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-footer">
+                            <p>Monitoreo completo con posibilidad de interrupción</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE DESCARGA -->
+            <section id="download">
+                <div id="download-button" class="section-title">
+                    <h2><i class="fas fa-download"></i> Descarga Gratis Ahora Mismo</h2>
+                    <p>Obtén la última versión de PDF Watermark Tool v3.3</p>
+                </div>
+
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-logo">
+                            <img src="logo.png" alt="Logo de PDF Watermark Tool">
+                        </div>
+                        <h3>PDF Watermark Tool</h3>
+                        <div class="version-badge">v3.3 - Última Versión</div>
+                        
+                        <ul class="download-features">
+                            <li><i class="fas fa-check-circle"></i> Instalación sencilla y rápida</li>
+                            <li><i class="fas fa-check-circle"></i> No requiere conexión a internet</li>
+                            <li><i class="fas fa-check-circle"></i> Compatible con Windows 10/11</li>
+                            <li><i class="fas fa-check-circle"></i> Tamaño: ~15 MB</li>
+                            <li><i class="fas fa-check-circle"></i> Actualizaciones automáticas</li>
+                            <li><i class="fas fa-check-circle"></i> Soporte técnico incluido</li>
+                        </ul>
+
+                        <a href="https://www.sunredline.org/Pubblica/PDF_Watermark/PDF_Watermark_Tool.exe" 
+                           download 
+                           class="btn btn-download btn-xl"
+                           onclick="trackDownload()">
+                            <i class="fas fa-download"></i> DESCARGAR AHORA (GRATIS)
+                        </a>
+
+                        <div class="file-info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Archivo: PDF_Watermark_Tool.exe • Tamaño: ~15 MB</span>
+                        </div>
+                    </div>
+
+                    <div class="download-info">
+                        <div class="info-card">
+                            <h4><i class="fas fa-shield-alt"></i> Seguridad Garantizada</h4>
+                            <p>El software es completamente seguro, sin malware, spyware ni publicidad no deseada. Todos los archivos se procesan localmente en tu computadora.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4><i class="fas fa-sync-alt"></i> Actualizaciones Automáticas</h4>
+                            <p>El programa verifica automáticamente la disponibilidad de nuevas versiones al inicio y te avisa cuando hay una actualización disponible.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h4><i class="fas fa-headset"></i> Soporte Gratuito</h4>
+                            <p>Asistencia técnica gratuita por correo electrónico. Respuesta garantizada en 48 horas en días laborables.</p>
+                        </div>
+
+                        <div class="requirements">
+                            <h3>Requisitos del Sistema</h3>
+                            <div class="requirements-grid">
+                                <div class="requirement-item">
+                                    <i class="fab fa-windows"></i>
+                                    <span>Windows 10/11</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-memory"></i>
+                                    <span>2 GB de RAM</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-hdd"></i>
+                                    <span>50 MB de espacio</span>
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Internet (opcional)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DE INFORMACIÓN -->
+			<section id="manual" class="info">
+				<div class="section-title">
+					<h2><i class="fas fa-info-circle"></i> Información sobre el Software</h2>
+					<p>Detalles técnicos y notas sobre el autor</p>
+				</div>
+
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3><i class="fas fa-code"></i> Desarrollado con Tecnologías Avanzadas</h3>
+                        <p>PDF Watermark Tool fue desarrollado utilizando las mejores tecnologías open-source:</p>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-python"></i> Python 3 - Lenguaje de programación</li>
+                            <li><i class="fas fa-database"></i> PyPDF2 - Manipulación de PDF</li>
+                            <li><i class="fas fa-palette"></i> ReportLab - Generación de PDF</li>
+                            <li><i class="fas fa-image"></i> Pillow - Procesamiento de imágenes</li>
+                            <li><i class="fas fa-desktop"></i> Tkinter - Interfaz gráfica</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-user"></i> Información sobre el Autor</h3>
+                        <div class="author-card">
+                            <div class="author-avatar">
+                                <img src="logo.png" alt="Logo">
+                            </div>
+                            <div class="author-info">
+                                <h4>Nogarotto Fabrizio</h4>
+                                <p>Desarrollador de Software</p>
+                                <div class="author-contact">
+                                    <a href="mailto:nogar8system@gmail.com">
+                                        <i class="fas fa-envelope"></i> nogar8system@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Software desarrollado con pasión y atención al detalle para ofrecer la mejor experiencia de usuario posible.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-lightbulb"></i> Notas Importantes</h3>
+                        <ul class="notes-list">
+                            <li><i class="fas fa-exclamation-triangle"></i> En modo sobrescritura, se crean respaldos automáticos (.pdf.bak)</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> Verifica siempre los resultados antes de eliminar los archivos originales</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> Mantén copias de seguridad de documentos importantes</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> El software es gratuito para uso personal y profesional</li>
+                            <li><i class="fas fa-exclamation-triangle"></i> © 2026 Nogarotto Fabrizio - Todos los derechos reservados</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3><i class="fas fa-history"></i> Historial de Versiones</h3>
+                        <div class="version-history">
+                            <div class="version-item">
+                                <span class="version-number">v3.3</span>
+                                <span class="version-date">2026</span>
+                                <p>Nueva funcionalidad: Convertir imágenes PNG/JPG a PDF, redimensionamiento automático, orientación personalizable</p>
+                            </div>
+                            <div class="version-item">
+                                <span class="version-number">v3.2</span>
+                                <span class="version-date">2026</span>
+                                <p>Soporte para marcas de agua de imagen, vista previa mejorada, unión de PDF</p>
+                            </div>
+                            <div class="version-item">
+                                <span class="version-number">v3.1</span>
+                                <span class="version-date">2025</span>
+                                <p>Mejoras en la interfaz, impresión de PDF, optimizaciones</p>
+                            </div>
+                            <div class="version-item">
+                                <span class="version-number">v3.0</span>
+                                <span class="version-date">2024</span>
+                                <p>Reescritura completa, interfaz moderna, multi-hilo</p>
+                            </div>
+                            <div class="version-item">
+                                <span class="version-number">v2.0</span>
+                                <span class="version-date">2023</span>
+                                <p>Primera versión estable con funcionalidades básicas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PIE DE PÁGINA CON LOGO -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Logo de PDF Watermark Tool">
+                        <span>PDF Watermark Tool v3.3</span>
+                    </div>
+                    <p>Software gratuito para añadir marcas de agua profesionales a tus documentos PDF.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#features">Funcionalidades</a></li>
+                        <li><a href="#screenshots">Vistas previas</a></li>
+                        <li><a href="#download">Descargar</a></li>
+                        <li><a href="#manual">Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="privacy.html">Política de Privacidad</a></li>
+                        <li><a href="terms.html">Términos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:nogar8system@gmail.com"><i class="fas fa-envelope"></i> nogar8system@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    <i class="fas fa-copyright"></i> 2026 Nogarotto Fabrizio - Todos los derechos reservados
+                </p>
+                <p class="footer-disclaimer">
+                    Este software es gratuito para uso personal y profesional. 
+                    No está afiliado con Adobe Systems Incorporated.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BOTÓN DE VOLVER ARRIBA -->
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Función para rastrear la descarga
+        function trackDownload() {
+            console.log('Descarga iniciada - PDF Watermark Tool v3.3');
+            alert('✅ ¡Descarga iniciada!\n\nEl archivo se guardará en la carpeta Descargas.\n\nDespués de la descarga, ejecuta el archivo .exe para instalar el software.');
+        }
+
+        // Función para desplazarse hacia arriba
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mostrar/ocultar botón de desplazamiento hacia arriba
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollButton.style.opacity = '1';
+                scrollButton.style.transform = 'translateY(0)';
+            } else {
+                scrollButton.style.opacity = '0';
+                scrollButton.style.transform = 'translateY(20px)';
+            }
+        });
+
+        // Desplazamiento suave para enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                
+                // Manejo especial para #download-button
+                if (targetId === '#download-button') {
+                    const downloadButton = document.querySelector('#download-button');
+                    if (downloadButton) {
+                        const header = document.querySelector('.header');
+                        const headerOffset = header ? header.offsetHeight + 40 : 100;
+                        const elementPosition = downloadButton.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+                }
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const header = document.querySelector('.header');
+                    const headerOffset = header ? header.offsetHeight + 20 : 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Alternador de tema
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Verificar preferencia de tema guardada o preferencia del sistema
+        const savedTheme = localStorage.getItem('pdfwatermark-theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('pdfwatermark-theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // Selector de idioma
+        const langCurrent = document.querySelector('.lang-current');
+        const langDropdown = document.querySelector('.lang-dropdown');
+
+        langCurrent.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', () => {
+            langDropdown.classList.remove('active');
+        });
+
+        // Cerrar menú desplegable al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const langSelector = document.querySelector('.lang-selector');
+            if (!langSelector.contains(event.target)) {
+                langDropdown.classList.remove('active');
+            }
+        });
+
+        // Animación al cargar la página
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.8s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html><div class="container">
     <!-- CABECERA CON LOGO -->
     <header class="header">
         <div class="header-content">
