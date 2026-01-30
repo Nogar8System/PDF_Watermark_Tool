@@ -1293,40 +1293,45 @@ section {
     }
 }	
 
-/* Footer Bottom con Logo N8S ridotto */
+/* Footer Bottom - Layout a 3 colonne */
 .footer-bottom {
-    text-align: left;
     padding: 15px 0;
     border-top: 1px solid var(--border-color);
     margin-top: 20px;
     width: 100%;
 }
 
-.footer-bottom-content {
+.footer-bottom-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    margin-bottom: 8px;
-    padding-left: 20px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
 }
 
-.footer-logo-inline {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+.footer-bottom-left,
+.footer-bottom-right {
+    flex: 1;
+    min-width: 120px;
 }
 
-.footer-n8s-logo-inline {
-    height: 24px; /* Dimensione ridotta */
+.footer-bottom-center {
+    flex: 2;
+    text-align: center;
+    min-width: 300px;
+}
+
+.footer-n8s-logo {
+    height: 24px;
     width: auto;
     filter: var(--logo-filter);
     opacity: 0.9;
     transition: opacity 0.3s ease;
 }
 
-.footer-n8s-logo-inline:hover {
+.footer-n8s-logo:hover {
     opacity: 1;
 }
 
@@ -1341,31 +1346,44 @@ section {
     font-size: 0.82rem;
     color: var(--text-secondary-color);
     margin: 6px 0 0 0;
-    text-align: left;
-    padding-left: 20px;
     line-height: 1.5;
 }
 
 /* Dark mode per il logo */
-.dark-mode .footer-n8s-logo-inline {
+.dark-mode .footer-n8s-logo {
     filter: brightness(0) invert(1);
 }
 
-/* Responsive: su schermi molto piccoli */
-@media (max-width: 480px) {
-    .footer-bottom-content {
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-bottom-container {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        padding-left: 15px;
+        text-align: center;
+        gap: 15px;
     }
     
-    .footer-n8s-logo-inline {
+    .footer-bottom-left,
+    .footer-bottom-right {
+        flex: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-bottom-center {
+        flex: none;
+        width: 100%;
+    }
+    
+    .footer-n8s-logo {
         height: 20px;
     }
     
+    .copyright-text {
+        font-size: 0.85rem;
+    }
+    
     .footer-disclaimer {
-        padding-left: 15px;
         font-size: 0.8rem;
     }
 }
