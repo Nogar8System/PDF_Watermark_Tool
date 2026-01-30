@@ -20,6 +20,7 @@
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --logo-filter: none;
 }
 
 /* Dark Mode */
@@ -32,6 +33,7 @@ body.dark-mode {
     --text-secondary: #d0d0d0;
     --text-light: #a0a0a0;
     --border-color: #404040;
+    --logo-filter: brightness(0) invert(1);
 }
 
 /* ========================================
@@ -1140,24 +1142,107 @@ section {
     font-size: 1rem;
 }
 
+/* ========================================
+   FOOTER BOTTOM - LAYOUT A 3 COLONNE
+   ======================================== */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 48px auto 0;
-    padding: 32px 20px;
-    text-align: center;
+    padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    width: 100%;
 }
 
-.footer-bottom p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 8px;
+.footer-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.footer-bottom-left,
+.footer-bottom-right {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom-center {
+    flex: 2;
+    text-align: center;
+    min-width: 300px;
+}
+
+/* Logo N8S con effetti hero */
+.footer-n8s-logo {
+    height: 60px;
+    width: auto;
+    filter: var(--logo-filter);
+    opacity: 0.9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.footer-n8s-logo:hover {
+    opacity: 1;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.copyright-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .footer-disclaimer {
-    font-size: 0.875rem;
-    opacity: 0.6;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 6px 0 0 0;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-bottom-left,
+    .footer-bottom-right {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer-bottom-center {
+        flex: none;
+        width: 100%;
+    }
+    
+    .footer-n8s-logo {
+        height: 45px;
+        padding: 6px;
+    }
+    
+    .copyright-text {
+        font-size: 0.85rem;
+    }
+    
+    .footer-disclaimer {
+        font-size: 0.8rem;
+    }
 }
 
 /* ========================================
@@ -1290,115 +1375,5 @@ section {
     
     section {
         padding: 48px 0;
-    }
-}	
-
-/* Footer Bottom - Layout a 3 colonne */
-.footer-bottom {
-    padding: 20px 0;
-    border-top: 1px solid var(--border-color);
-    margin-top: 20px;
-    width: 100%;
-}
-
-.footer-bottom-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 20px;
-}
-
-.footer-bottom-left,
-.footer-bottom-right {
-    flex: 1;
-    min-width: 120px;
-}
-
-.footer-bottom-center {
-    flex: 2;
-    text-align: center;
-    min-width: 300px;
-}
-
-/* Logo N8S con effetti hero */
-.footer-n8s-logo {
-    height: 60px;
-    width: auto;
-    filter: var(--logo-filter);
-    opacity: 0.9;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-.footer-n8s-logo:hover {
-    opacity: 1;
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.copyright-text {
-    margin: 0;
-    color: var(--text-color);
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.footer-disclaimer {
-    font-size: 0.82rem;
-    color: var(--text-secondary-color);
-    margin: 6px 0 0 0;
-    line-height: 1.5;
-}
-
-/* Dark mode per il logo */
-.dark-mode .footer-n8s-logo {
-    filter: brightness(0) invert(1);
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode .footer-n8s-logo:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .footer-bottom-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .footer-bottom-left,
-    .footer-bottom-right {
-        flex: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-bottom-center {
-        flex: none;
-        width: 100%;
-    }
-    
-    .footer-n8s-logo {
-        height: 45px;
-        padding: 6px;
-    }
-    
-    .copyright-text {
-        font-size: 0.85rem;
-    }
-    
-    .footer-disclaimer {
-        font-size: 0.8rem;
     }
 }
